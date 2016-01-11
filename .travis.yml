@@ -1,7 +1,6 @@
 language: python
 python:
 - '3.4'
-- pypy
 before_install: pip install -r requirements.txt
 deploy:
   provider: s3
@@ -13,3 +12,4 @@ deploy:
   acl: public_read
   on:
     repo: pawelplewinski/psoir-webapp
+script: nosetests
